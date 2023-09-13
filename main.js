@@ -51,8 +51,9 @@ function numberToDisplay(number) {
             displayValue = "";
         }
         displayValue += number;
-        display.textContent = displayValue;
         second = displayValue;
+        display.textContent = displayValue;
+        console.log("second: " + second)
     }
 }
 
@@ -80,8 +81,13 @@ numbers.forEach(number => {number.addEventListener("click", function (){ numberT
 
 const operators = document.querySelectorAll(".operator");
 operators.forEach(button => {button.addEventListener("click", function (){ 
+    if (second !== null) {
+        let partialResult = Number(operate(Number(first), Number(second), operator));
+        resultToDisplay(partialResult);
+        first = partialResult;
+        second = null;
+    }
         operator = button.textContent; 
-        console.log(operator)
     });
 });
 
