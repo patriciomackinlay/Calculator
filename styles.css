@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+}
+
+button {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.display {
+    border: 0.1rem solid grey;
+    height: 50px;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 32px;
+    padding-left: 10px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.zero {
+    grid-column: 1/ 4;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+}
+
+.equals {
+    flex-grow: 2;
+}
